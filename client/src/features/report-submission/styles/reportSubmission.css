@@ -1,0 +1,250 @@
+.report-page {
+  min-height: 100vh;
+  background: #f7faf7;
+}
+
+.report-page-header {
+  padding: 70px 8% 45px;
+  background: linear-gradient(135deg, #f0fdf4, #ffffff);
+  text-align: center;
+}
+
+.report-page-header h1 {
+  margin: 8px 0 15px;
+  color: #17221a;
+  font-size: clamp(2rem, 4vw, 3.3rem);
+}
+
+.report-page-header p {
+  max-width: 700px;
+  margin: auto;
+  color: #647067;
+  line-height: 1.7;
+}
+
+.report-page-label {
+  display: inline-block;
+  padding: 7px 14px;
+  border-radius: 50px;
+  background: #dcfce7;
+  color: #166534;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.report-form-container {
+  display: grid;
+  grid-template-columns: 0.75fr 1.25fr;
+  gap: 45px;
+  max-width: 1200px;
+  margin: auto;
+  padding: 60px 8%;
+}
+
+.form-information h2 {
+  margin-top: 0;
+  color: #17221a;
+}
+
+.form-information > p {
+  margin-bottom: 30px;
+  color: #647067;
+  line-height: 1.7;
+}
+
+.information-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  margin-bottom: 18px;
+  padding: 18px;
+  border: 1px solid #e2e8e3;
+  border-radius: 12px;
+  background: white;
+}
+
+.information-card > span {
+  font-size: 1.6rem;
+}
+
+.information-card strong {
+  color: #17221a;
+}
+
+.information-card p {
+  margin: 5px 0 0;
+  color: #647067;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.form-card {
+  padding: 35px;
+  border: 1px solid #e2e8e3;
+  border-radius: 18px;
+  background: white;
+  box-shadow: 0 15px 45px rgba(22, 101, 52, 0.07);
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  margin-bottom: 8px;
+  color: #17221a;
+  font-size: 0.92rem;
+  font-weight: 600;
+}
+
+.required {
+  margin-left: 3px;
+  color: #dc2626;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #d6ded8;
+  border-radius: 9px;
+  background: white;
+  color: #17221a;
+  outline: none;
+  transition: 0.2s ease;
+  font-family: inherit;
+  font-size: 0.95rem;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: #15803d;
+  box-shadow: 0 0 0 3px rgba(21, 128, 61, 0.1);
+}
+
+.form-group .input-error {
+  border-color: #dc2626;
+}
+
+.error-message {
+  display: block;
+  margin-top: 6px;
+  color: #dc2626;
+  font-size: 0.8rem;
+}
+
+.severity-options {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+
+.severity-option {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 !important;
+  padding: 11px;
+  border: 1px solid #d6ded8;
+  border-radius: 9px;
+  cursor: pointer;
+  transition: 0.2s;
+  font-weight: 500;
+}
+
+.severity-option input {
+  display: none;
+}
+
+.severity-option.selected {
+  border-color: #15803d;
+  background: #dcfce7;
+  color: #166534;
+  font-weight: 700;
+}
+
+.textarea-footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  color: #89948c;
+  margin-top: 6px;
+}
+
+.submit-report-button {
+  width: 100%;
+  padding: 14px 20px;
+  border: none;
+  border-radius: 10px;
+  background: #15803d;
+  color: white;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.submit-report-button:hover {
+  background: #166534;
+}
+
+.submit-report-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.form-success,
+.form-server-error {
+  margin-bottom: 22px;
+  padding: 13px 16px;
+  border-radius: 9px;
+  font-weight: 500;
+}
+
+.form-success {
+  background: #dcfce7;
+  color: #166534;
+  border: 1px solid #bbf7d0;
+}
+
+.form-server-error {
+  background: #fee2e2;
+  color: #991b1b;
+  border: 1px solid #fecaca;
+}
+
+@media (max-width: 850px) {
+  .report-form-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .report-page-header,
+  .report-form-container {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .form-card {
+    padding: 22px;
+  }
+
+  .severity-options {
+    grid-template-columns: 1fr;
+  }
+}
